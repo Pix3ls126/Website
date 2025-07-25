@@ -68,72 +68,83 @@ function App() {
 
       {/* Home Section */}
       <section id="Home" className="Home">
-        <div className="Home-content">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="Home-title">
-              Hi, I'm <span className="highlight">Aaron</span>
-            </h1>
-            <p className="Home-subtitle">Data Analyst and Software Developer</p>
-            <p className="Home-description">
-              I'm a new graduate from the University of Toronto where I studied
-              Computer Science, Mathematics, and Statistics.
-            </p>
-            <div className="Home-buttons">
-              <button
-                className="btn btn-primary"
-                onClick={() => scrollToSection("projects")}
-              >
-                View My Work
-              </button>
-              <button className="btn btn-secondary">
-                <Download size={20} />
-                Download Resume
-              </button>
-            </div>
-            <div className="Home-socials">
-              <a
-                href="https://github.com/pix3ls126"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://linkedin.com/in/aaron-xiaozhou-liu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:aaronxiaozhou.liu@gmail.com"
-                className="social-link"
-              >
-                <Mail size={24} />
-              </a>
-            </div>
-          </motion.div>
-        </div>
-        <div className="Home-image">
-          <motion.div
-            className="Home-avatar"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <img
-              src="/me.jpg" // Updated path to the image
-              alt="Aaron's Profile"
-              className="avatar-image"
-            />
-          </motion.div>
-        </div>
+        <div className="container">
+          {" "}
+          {/* This container was missing! */}
+          <div className="Home-content">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="Home-title">
+                Hi, I'm <span className="highlight">Aaron</span>
+              </h1>
+              <p className="Home-subtitle">
+                Data Analyst and Software Developer
+              </p>
+              <p className="Home-description">
+                I'm a new graduate from the University of Toronto where I
+                studied Computer Science, Mathematics, and Statistics.
+              </p>
+              <div className="Home-buttons">
+                <button
+                  className="btn btn-primary"
+                  onClick={() => scrollToSection("projects")}
+                >
+                  View My Work
+                </button>
+                <a
+                  href="/Aaron_Liu_Resume.pdf"
+                  download="Aaron_Liu_Resume.pdf"
+                  className="btn btn-secondary"
+                >
+                  <Download size={20} />
+                  Download Resume
+                </a>
+              </div>
+              <div className="Home-socials">
+                <a
+                  href="https://github.com/pix3ls126"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <Github size={24} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/aaron-xiaozhou-liu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  <Linkedin size={24} />
+                </a>
+                <a
+                  href="mailto:aaronxiaozhou.liu@gmail.com"
+                  className="social-link"
+                >
+                  <Mail size={24} />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+          <div className="Home-image">
+            <motion.div
+              className="Home-avatar"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <img
+                src="/me.jpg"
+                alt="Aaron's Profile"
+                className="avatar-image"
+              />
+            </motion.div>
+          </div>
+        </div>{" "}
+        {/* End container */}
       </section>
 
       {/* About Section */}
